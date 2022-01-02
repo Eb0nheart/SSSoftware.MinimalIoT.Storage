@@ -1,8 +1,8 @@
 ﻿namespace SSSoftware.MinimalIoT.Storage.Entities;
 
-public class Device
+public class Device : BaseEntity
 {
-    public Guid Id { get; set; }
     public Guid OwnerId { get; set; }
+
     public string Name { get; set; }
 }
