@@ -2,13 +2,13 @@
 
 public interface IDbFacade<T> where T : BaseEntity
 {
-    Task<T> Create(T entity);
+    Task<bool> Create(T entity);
 
-    Task<T> Update(T entity);
+    Task<bool> Update(T entity);
 
-    Task Delete(Guid id);
+    Task<bool> Delete(Guid id);
 
-    Task<ICollection<T>> GetAll();
+    Task<IEnumerable<T>> GetAll();
 
     Task<T> Get(Guid id);
 }
